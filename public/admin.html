@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MonkeyType Leaderboard - Admin Mode</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/scripts.js"></script>
+</head>
+<body>
+  <header>
+    <button id="logout-button" class="login-btn" style="right: 20px;">Logout</button>
+  </header>
+  <div class="container">
+    
+    <h1>MonkeyType Typing Leaderboard - Admin View</h1>
+    <form id="entry-form">
+      <input type="text" id="name" placeholder="Name" required>
+      <select id="year" required>
+        <option value="1st Year">1st Year</option>
+        <option value="2nd Year">2nd Year</option>
+        <option value="3rd Year">3rd Year</option>
+        <option value="4th Year">4th Year</option>
+        <option value="5th Year">5th Year</option>
+      </select>
+      <input type="number" id="wpm" placeholder="WPM" required>
+      <button type="submit">Add Entry</button>
+    </form>
+    
+    <h2>Leaderboard</h2>
+    <table id="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Year</th>
+          <th>WPM</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    
+    <!-- Modal for showing attempts -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h3 id="modal-header">Student Attempts</h3>
+        <table id="attempts-table">
+          <thead>
+            <tr>
+              <th>WPM</th>
+              <th>Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
